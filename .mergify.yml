@@ -1,0 +1,9 @@
+merge_queue:
+  max_parallel_checks: 1
+queue_rules:
+  - name: default
+    batch_size: 1
+    checks_timeout: 1 min
+    queue_conditions: true
+    merge_conditions:
+      - check-success = vm4-timeout-never-green
