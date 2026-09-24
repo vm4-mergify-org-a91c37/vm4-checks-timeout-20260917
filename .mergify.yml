@@ -1,9 +1,13 @@
 merge_queue:
   max_parallel_checks: 1
+
 queue_rules:
-  - name: default
+  - name: vm4-status-reversal-240924
     batch_size: 1
-    checks_timeout: 1 min
+    batch_max_wait_time: "1 second"
+    checks_timeout: null
     queue_conditions: true
     merge_conditions:
-      - check-success = vm4-timeout-never-green
+      - status-success = vm4-security-guard-240924
+      - status-success = vm4-hold-guard-240924
+    merge_method: merge
