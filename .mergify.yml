@@ -11,6 +11,5 @@ queue_rules:
       - label = vm4-postponed-allow-260926
     merge_conditions:
       - status-success = vm4-postponed-hold-260926
-    allow_inplace_checks: false
     draft_bot_account: livastic-vm4-secondary-20260911
     merge_method: merge
